@@ -1,5 +1,5 @@
 export default async function Home() {
-  const data = await (await fetch("http://localhost:8000")).json();
+  const data = await (await fetch(process.env.API_URL as string)).json();
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
